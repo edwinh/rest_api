@@ -93,4 +93,4 @@ def delete_measurement(id):
   return electricity_measurement_schema.jsonify(measurement)
 
 if __name__ == '__main__':
-  app.run(debug=True)
+  app.run(debug=True, host='192.168.72.4')
