@@ -14,6 +14,10 @@ db = SQLAlchemy(app)
 # Init ma
 ma = Marshmallow(app)
 
+# To create db:
+# from app import db
+# db.create_all()
+
 # Measurement Class
 class ElectricityMeasurement(db.Model):
   id = db.Column(db.Integer, primary_key=True)
@@ -89,4 +93,4 @@ def delete_measurement(id):
   return electricity_measurement_schema.jsonify(measurement)
 
 if __name__ == '__main__':
-  app.run(debug=True, host='192.168.72.108')
+  app.run(debug=True)
